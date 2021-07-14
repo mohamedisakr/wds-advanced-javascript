@@ -1,4 +1,4 @@
-import data from "./data.js";
+import { airportList } from "./data.js";
 
 /*
 const getAttributes = (item) => {
@@ -6,9 +6,9 @@ const getAttributes = (item) => {
   return attributes; //   return { name, city, country };
 };
 
-data.forEach((item) => console.log(getAttributes(item)));
+airportList.forEach((item) => console.log(getAttributes(item)));
 
-const item = data[data.length - 1];
+const item = airportList[airportList.length - 1];
 console.log(getAttributes(item));
 */
 
