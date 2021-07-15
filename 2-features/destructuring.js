@@ -1,4 +1,75 @@
+import assert from "assert/strict";
 import { airportList } from "./data.js";
+
+const { 0: x, 2: y } = ["a", "b", "c"];
+assert.equal(x, "a");
+assert.equal(y, "c");
+/*
+// object-destructure primitive values
+const course = "JavaScript for impatient programmers (ES2021 edition)";
+const { length } = course;
+console.log(length);
+*/
+
+/*
+// https://hackernoon.com/accessing-nested-objects-in-javascript-f02f1bd6387f
+const user = {
+  id: 101,
+  email: "jack@dev.com",
+  personalInfo: {
+    name: "Jack",
+    address: {
+      line1: "westwish st",
+      line2: "washmasher",
+      city: "wallas",
+      state: "WX",
+    },
+  },
+};
+
+// Destructuring city, state from the user object
+const {
+  personalInfo: {
+    address: { city, state },
+  },
+} = user;
+
+console.log(city);
+console.log(state);
+*/
+
+/*
+// https://www.rithmschool.com/courses/intermediate-javascript/javascript-nested-data-structures-objects
+let instructorData = {
+  name: "Elie",
+  additionalData: {
+    instructor: true,
+    favoriteHobbies: ["Playing Cello", "Tennis", "Coding"],
+    moreDetails: {
+      favoriteBasketballTeam: "New York Knicks",
+      numberOfSiblings: 3,
+      isYoungest: true,
+      hometown: {
+        city: "West Orange",
+        state: "NJ",
+      },
+      citiesLivedIn: ["Seattle", "Providence", "New York"],
+    },
+  },
+};
+
+// Destructuring city, state from the instructorData object
+const {
+  additionalData: {
+    moreDetails: {
+      hometown: { city, state },
+    },
+  },
+} = instructorData;
+
+console.log(city);
+console.log(state);
+*/
 
 /*
 const getAttributes = (item) => {
@@ -35,7 +106,7 @@ const airportDetails = {
 
 const airportInfo = { ...airport, ...airportDetails };
 console.log(airportInfo);
-*/
+// */
 
 /*
 const toFirstAndLast = (fullName) => {
