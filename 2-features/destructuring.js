@@ -1,6 +1,58 @@
 import assert from "assert/strict";
 import { airportList } from "./data.js";
 
+/*
+const [, year, month, day] = /^([0-9]{4})-([0-9]{2})-([0-9]{2})$/.exec(
+  "2021-12-31"
+);
+
+assert.equal(year, "2021");
+assert.equal(month, "12");
+assert.equal(day, "31");
+*/
+
+/*
+let x = 10;
+let y = 100;
+
+[x, y] = [y, x];
+
+assert.equal(x, 100);
+assert.equal(y, 10);
+console.log(`x : ${x}`);
+console.log(`y : ${y}`);
+*/
+
+/*
+const [, a, b] = "xyz";
+assert.equal(a, "y");
+assert.equal(b, "z");
+*/
+
+/*
+const user = {
+  id: 101,
+  email: "jack@dev.com",
+  personalInfo: {
+    name: "Jack",
+    address: {
+      line1: "westwish st",
+      line2: "washmasher",
+      city: "wallas",
+      state: "WX",
+    },
+  },
+};
+
+const desc = Object.getOwnPropertyDescriptor(user, "id");
+const { configurable, enumerable, value, writable } = desc;
+assert.equal(configurable, true);
+assert.equal(enumerable, true);
+assert.equal(value, 101);
+assert.equal(writable, true);
+*/
+
+/*
 const person = {
   name: "Terrance Roberts",
   occupation: {
@@ -25,6 +77,7 @@ const {
 } = person;
 
 console.log(kind);
+*/
 
 /*
 const myStorage = {
