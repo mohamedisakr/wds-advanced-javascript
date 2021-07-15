@@ -1,9 +1,79 @@
 import assert from "assert/strict";
 import { airportList } from "./data.js";
 
+const person = {
+  name: "Terrance Roberts",
+  occupation: {
+    title: "District Manager",
+    yearsHeld: 2,
+  },
+  pets: [
+    {
+      kind: "dog",
+      name: "Fiona",
+    },
+    {
+      kind: "cat",
+      name: "Ralph",
+    },
+  ],
+};
+
+// kind: "cat"
+const {
+  pets: [, { kind }],
+} = person;
+
+console.log(kind);
+
+/*
+const myStorage = {
+  car: {
+    inside: {
+      "glove box": "maps",
+      "passenger seat": "crumbs",
+    },
+    outside: {
+      trunk: "jack",
+    },
+  },
+};
+
+const {
+  car: { inside },
+} = myStorage;
+
+const maps = inside["glove box"];
+console.log(maps);
+*/
+
+/*
+// https://stackoverflow.com/questions/58273832/destructuring-nested-objects-in-an-array
+const exampleObject = {
+  collection: [
+    {
+      name: "First Object",
+    },
+    {
+      name: "Second Object",
+    },
+  ],
+};
+
+const {
+  collection: [{ name: first }, { name: second }],
+} = exampleObject;
+
+console.log(first);
+console.log(second);
+*/
+
+/*
 const { 0: x, 2: y } = ["a", "b", "c"];
 assert.equal(x, "a");
 assert.equal(y, "c");
+*/
+
 /*
 // object-destructure primitive values
 const course = "JavaScript for impatient programmers (ES2021 edition)";
